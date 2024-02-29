@@ -7,10 +7,10 @@
     --FF-PRIMARY: "Nunito", sans-serif;
     --FF-SECONDARY: 'Grape Nuts', cursive;
     --FF-HEADER-ONE: 'Cute Font', sans-serif;
-    --FS-S: 1rem;
-    --FS: 1.2rem;
-    --FS-L: 1.5rem;
-    --FS-XL: 3rem;
+    --FS-S: 0.8rem;
+    --FS: 1.0rem;
+    --FS-L: 1.3rem;
+    --FS-XL: 2.5rem;
 
     /* COLOR */
     --BGCOLOR-LIGHT: rgba(255, 255, 255, 0.521);
@@ -276,6 +276,13 @@ span {
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
+    :root {
+        --FS-S: 1rem;
+        --FS: 1.2rem;
+        --FS-L: 1.5rem;
+        --FS-XL: 3rem;
+    }
+
     .header__ul {
         position: absolute;
         right: 0;
