@@ -13,10 +13,10 @@
     --FS-XL: 2.5rem;
 
     /* COLOR */
-    --BGCOLOR-LIGHT: rgba(255, 255, 255, 0.521);
-    --BGCOLOR-DARK: rgba(0, 0, 0, 0.788);
-    --COLOR-LIGHT: rgba(255, 255, 255, 0.884);
-    --COLOR-DARK: rgba(24, 13, 13, 0.774);
+    --BGCOLOR-LIGHT: #ffffff85;
+    --BGCOLOR-DARK: #000000c9;
+    --COLOR-LIGHT: #ffffffe1;
+    --COLOR-DARK: #180d0dc5;
 
     /* GENERAL */
     --PADDING: 0.5rem;

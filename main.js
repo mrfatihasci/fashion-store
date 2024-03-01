@@ -75,10 +75,10 @@ const navMenuCollapsing = () => {
   const menu = document.querySelector("#nav-ul");
 
   const toggleMenu = () => {
-    if (menu.classList.contains("menu-open")) {
-      menu.classList.remove("menu-open");
+    if (menu.classList.contains("flex")) {
+      menu.classList.remove("flex");
     } else {
-      menu.classList.add("menu-open");
+      menu.classList.add("flex");
     }
   };
   menuButton.addEventListener("click", toggleMenu);
@@ -87,10 +87,10 @@ const navMenuCollapsing = () => {
   const menuButton = document.querySelector("#menu-button");
   const menu = document.querySelector("#nav-ul");
   menuButton.addEventListener("click", () => {
-    if (menu.classList.contains("menu-open")) {
-      menu.classList.remove("menu-open");
+    if (menu.classList.contains("flex")) {
+      menu.classList.remove("flex");
     } else {
-      menu.classList.add("menu-open");
+      menu.classList.add("flex");
     }
   });
 }; */
@@ -154,21 +154,21 @@ const footerMenu = {
   },
 
   showMenus() {
-    this.helpMenu.classList.remove("offscreen");
-    this.aboutMenu.classList.remove("offscreen");
-    this.socialMenu.classList.remove("offscreen");
-    this.otherMenu.classList.remove("offscreen");
-    this.helpButton.classList.remove("blue");
-    this.aboutButton.classList.remove("blue");
-    this.socialButton.classList.remove("blue");
-    this.otherButton.classList.remove("blue");
+    this.helpMenu.classList.remove("hidden");
+    this.aboutMenu.classList.remove("hidden");
+    this.socialMenu.classList.remove("hidden");
+    this.otherMenu.classList.remove("hidden");
+    this.helpButton.classList.remove("text-black");
+    this.aboutButton.classList.remove("text-black");
+    this.socialButton.classList.remove("text-black");
+    this.otherButton.classList.remove("text-black");
   },
 
   hideMenus() {
-    this.helpMenu.classList.add("offscreen");
-    this.aboutMenu.classList.add("offscreen");
-    this.socialMenu.classList.add("offscreen");
-    this.otherMenu.classList.add("offscreen");
+    this.helpMenu.classList.add("hidden");
+    this.aboutMenu.classList.add("hidden");
+    this.socialMenu.classList.add("hidden");
+    this.otherMenu.classList.add("hidden");
   },
 
   helpEvent() {
@@ -188,8 +188,8 @@ const footerMenu = {
   },
 
   toggleButtonAndMenu(button, menu) {
-    button.classList.toggle("blue");
-    menu.classList.toggle("offscreen");
+    button.classList.toggle("text-black");
+    menu.classList.toggle("hidden");
   },
 
   addRemoveEventListeners(addListeners) {

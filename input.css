@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.span--icon {
+    @apply text-xl indent-0 tracking-normal;
+}
+
+.header__nav-a {
+    @apply text-LIGHTC hover:text-LIGHTC visited:text-LIGHTC focus:text-LIGHTC;
+}
