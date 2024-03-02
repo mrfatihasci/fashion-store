@@ -47,7 +47,7 @@ The tailwind branch includes an installation guide for Tailwind CSS and its plug
   <details>
   <summary> <strong> INSTALLATION</strong> </summary>
 
-#### Installation of Tailwind + Prettier
+#### Installation of Tailwind (CLI)
 
 if you have an existing project like react angular etc, you can install it as dev-dependency. but building the project from scratch does not require first step
 Install Tailwind CSS. Install tailwindcss via npm, and create your tailwind.config.js file.
@@ -69,10 +69,14 @@ Start the Tailwind CLI build process. Run the CLI tool in terminal to scan your 
 
 Start using Tailwind in your HTML. Add your compiled CSS file to the <head> and start using Tailwind’s utility classes to style your content.
 
-#### PRETTIER INSTALLATION:
+For production, i prefer adding below script for converting output.css to build.css, later updating css links in .html's:
+
+    "tailwindcss-optimize": "npx tailwindcss -i output.css -o build.css --minify"
+
+#### Prettier + Its Tailwindcss Plugin Installation:
 
 npm install --save-dev --save-exact prettier prettier-plugin-tailwindcss
-node --eval "fs.writeFileSync('.prettierrc','{}\n')"
+node --eval "fs.writeFileSync('.prettierrc.json','{}\n')"
 add this plugin inside the {} of .prettierrc.json:
 "plugins": ["prettier-plugin-tailwindcss"]
 
@@ -88,11 +92,13 @@ Now, format all files with Prettier:
 you can add a script for minifying css in package.json if you are lazy like me:
 "tailwindcss-optimize": "npx tailwindcss -o build.css --minify"
 
-my additional preference in .prettier.json:
-"singleQuote": false,
-"htmlWhitespaceSensitivity": "ignore",
-"printWidth": 400
-setting printWidth to ~100 before any git push is a good idea
+my preference in .prettier.json:
+
+    "singleQuote": false,
+    "htmlWhitespaceSensitivity": "ignore",
+    "printWidth": 400
+
+note: setting printWidth to ~100 before any git push is a good idea
 
 #### Installation of only Prettier:
 

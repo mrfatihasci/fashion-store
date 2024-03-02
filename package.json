@@ -1,7 +1,8 @@
 {
   "scripts": {
     "tailwindcss": "npx tailwindcss -i ./input.css -o ./output.css --watch",
-    "prettier": "npx prettier --write **/*.html"
+    "prettier": "npx prettier --write **/*.html",
+    "tailwindcss-optimize": "npx tailwindcss -i output.css -o build.css --minify"
   },
   "devDependencies": {
     "prettier": "3.2.5",
