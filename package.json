@@ -1,10 +1,11 @@
 {
-  "scripts":{
+  "scripts": {
     "tailwindcss": "npx tailwindcss -i ./input.css -o ./output.css --watch",
-    "prettier" : "npx prettier --write **/*.html"
-    
+    "prettier": "npx prettier --write **/*.html"
   },
   "devDependencies": {
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "0.5.11",
     "tailwindcss": "^3.4.1"
   }
 }

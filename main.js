@@ -1,4 +1,4 @@
-document.addEventListener("readystatechange", event => {
+document.addEventListener("readystatechange", (event) => {
   if (event.target.readyState === "complete") {
     console.log("readyState: complete");
     initApp();
@@ -43,12 +43,13 @@ function something() {
 
 //type writing code--------------------------------------------------------------
 const typewritingP = document.querySelector("#p--typewriting");
-const text ="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero iste perferendis architecto eos eligendi placeat mollitia vitae dolores qui!";
+const text =
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero iste perferendis architecto eos eligendi placeat mollitia vitae dolores qui!";
 const textArray = text.split(" ");
 const textArrayLength = textArray.length;
 let x = 0;
 let typeWriterInterval;
-  // Add typewriter effect function for the text of element to be added character by character(2letters at once)
+// Add typewriter effect function for the text of element to be added character by character(2letters at once)
 function typeWriter() {
   if (x < text.length) {
     typewritingP.innerHTML += text.charAt(x);
@@ -77,8 +78,10 @@ const navMenuCollapsing = () => {
   const toggleMenu = () => {
     if (menu.classList.contains("flex")) {
       menu.classList.remove("flex");
+      menu.classList.add("hidden");
     } else {
       menu.classList.add("flex");
+      menu.classList.remove("hidden");
     }
   };
   menuButton.addEventListener("click", toggleMenu);
@@ -136,14 +139,14 @@ const footerMenu = {
   },
 
   handleResize() {
-  const newIsScreenWidthLarge = this.mediaQuery.matches;
-  
-  if (newIsScreenWidthLarge !== this.isScreenWidthLarge) {
-    this.isScreenWidthLarge = newIsScreenWidthLarge;
-    this.updateMenus();
-    this.addRemoveEventListeners(this.isScreenWidthLarge);
-  }
-},
+    const newIsScreenWidthLarge = this.mediaQuery.matches;
+
+    if (newIsScreenWidthLarge !== this.isScreenWidthLarge) {
+      this.isScreenWidthLarge = newIsScreenWidthLarge;
+      this.updateMenus();
+      this.addRemoveEventListeners(this.isScreenWidthLarge);
+    }
+  },
 
   updateMenus() {
     if (this.isScreenWidthLarge) {
@@ -158,10 +161,6 @@ const footerMenu = {
     this.aboutMenu.classList.remove("hidden");
     this.socialMenu.classList.remove("hidden");
     this.otherMenu.classList.remove("hidden");
-    this.helpButton.classList.remove("text-black");
-    this.aboutButton.classList.remove("text-black");
-    this.socialButton.classList.remove("text-black");
-    this.otherButton.classList.remove("text-black");
   },
 
   hideMenus() {
@@ -188,7 +187,6 @@ const footerMenu = {
   },
 
   toggleButtonAndMenu(button, menu) {
-    button.classList.toggle("text-black");
     menu.classList.toggle("hidden");
   },
 

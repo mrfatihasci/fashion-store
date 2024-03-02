@@ -344,18 +344,38 @@ span {
         flex-direction: row;
     }
 
+
+
+
+    /* CHECK THIS IF NEEDED. I DID NOT ADD FOR NOW
+ */
     footer ul {
         display: block;
     }
+
+    /* CHECK THIS IF NEEDED. I DID NOT ADD FOR NOW
+ */
+
+
+
+
 
     .footer__icon-button {
         display: none;
     }
 }
 
+
+/*   sm: "576px"
+    md: "768px"
+    lg: "992px"
+    xl: "1200px"
+    "2xl": "1536px" */
+
+
 /* || LARGE */
 @media screen and (min-width: 992px) {
-    .header__ul {
+    /*    .header__ul {
         position: static;
         display: flex;
         flex-direction: row;
@@ -363,7 +383,7 @@ span {
         height: auto;
         border: none;
         background-color: var(--BGCOLOR-LIGHT);
-    }
+    } */
 
     figure {
         margin: 0 2rem;
@@ -372,7 +392,7 @@ span {
 
 /* || XL  */
 @media screen and (min-width: 1200px) {
-    .header__ul {
+    /*   .header__ul {
         position: static;
         display: flex;
         flex-direction: row;
@@ -380,7 +400,7 @@ span {
         height: auto;
         border: none;
         background-color: var(--BGCOLOR-LIGHT);
-    }
+    } */
 
     figure {
         margin: 0 4rem;
