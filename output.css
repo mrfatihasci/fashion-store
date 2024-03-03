@@ -582,10 +582,6 @@ video {
   display: inline-block;
 }
 
-.inline{
-  display: inline;
-}
-
 .flex{
   display: flex;
 }
@@ -608,10 +604,6 @@ video {
 
 .w-\[75vw\]{
   width: 75vw;
-}
-
-.w-auto{
-  width: auto;
 }
 
 .w-full{
