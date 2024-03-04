@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function Footer(){
     return(
          <footer class="bg-DARKBG pb-2 pt-6 text-left text-2xl/loose text-LIGHTC sm:text-2xlsm">

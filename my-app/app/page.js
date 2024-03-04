@@ -2,31 +2,35 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-   
-      <main class="flex flex-grow items-center justify-center pb-4 text-center">
+    <main className="flex flex-grow items-center justify-center pb-4 text-center">
       <h2></h2>
       <h3></h3>
-      <div class="flex flex-grow flex-col flex-wrap items-center justify-center md:flex-row md:flex-nowrap">
-        <figure class="w-full sm:w-11/12 md:ml-2 md:mr-2 md:w-1/2 md:pt-4 lg:ml-8 lg:mr-8 xl:ml-16 xl:mr-16">
+      <div className="flex flex-grow flex-col flex-wrap items-center justify-center md:flex-row md:flex-nowrap">
+        <figure className="w-full sm:w-11/12 md:ml-2 md:mr-2 md:w-1/2 md:pt-4 lg:ml-8 lg:mr-8 xl:ml-16 xl:mr-16">
           <img
-            class="block h-auto w-full max-w-full"
+            className="block h-auto w-full max-w-full"
             loading="lazy"
             width="3264px"
             height="3685px"
-            srcset="images/index-913w.jpg 913w, images/index-1207w.jpg 1207w, images/index-1468w.jpg 1468w, images/index-1958w.jpg 1958w, images/index-2448w.jpg 2448w, images/index-3264w.jpg 3264w"
+            srcSet="public/images/index-913w.jpg 913w, public/images/index-1207w.jpg 1207w, public/images/index-1468w.jpg 1468w, public/images/index-1958w.jpg 1958w, public/images/index-2448w.jpg 2448w, public/images/index-3264w.jpg 3264w"
             sizes="100vw"
-            src="images/index-3264w.jpg"
+            src="public/images/index-3264w.jpg"
             alt="sdfd"
             title="non-existing product by non-existing company, this site is for educational purposes only"
           />
-          <figcaption class="text-center">https://pixabay.com/photos/fashion-male-beautiful-man-car-1399346/</figcaption>
+          <figcaption className="text-center">
+            https://pixabay.com/photos/fashion-male-beautiful-man-car-1399346/
+          </figcaption>
         </figure>
-        <p id="p--typewriting" class="block text-center text-2xl/loose md:w-1/2"></p>
+        <p
+          id="p--typewriting"
+          className="block text-center text-2xl/loose md:w-1/2"
+        ></p>
       </div>
     </main>
 
-/*  <main className="flex min-h-screen flex-col items-center justify-between p-24"> */
-      /* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+    /*  <main className="flex min-h-screen flex-col items-center justify-between p-24"> */
+    /* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">app/page.js</code>
@@ -131,6 +135,6 @@ export default function Home() {
           </p>
         </a>
       </div> */
-   /*  </main> */
+    /*  </main> */
   );
 }

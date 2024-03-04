@@ -1,10 +1,18 @@
 import { Nunito } from "next/font/google";
+const nunito = Nunito({ subsets: ["latin"], weight: "400" });
+/* import { Grape_Nuts } from "next/font/google"; */
 import "./globals.css";
-/* import { Analytics } from '@vercel/analytics/react'; */
 
-const nunito = Nunito({subsets: ['latin']});
-import Footer from "./ui/dashboard/footer";
-import Header from "./ui/dashboard/header";
+/* const capriola = Capriola({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-capriola",
+}); */
+
+/* import { Analytics } from '@vercel/analytics/react'; */
+import Footer from "./ui/footer";
+import Header from "./ui/header";
+
 export const metadata = {
   title: "Lorem Fashion Store",
   description: "Products of Lorem Fashion Store",
@@ -17,8 +25,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-        </body>
-     {/*  <Analytics mode={'production'} /> */}
+      </body>
+      {/*  <Analytics mode={'production'} /> */}
     </html>
   );
 }
