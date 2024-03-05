@@ -24,40 +24,25 @@ export default function Header() {
         </div>
       </div>
       <nav className="relative">
-        <ul
-          id="nav-ul"
-          className="absolute right-0 hidden h-[60vh] w-[75vw] list-none flex-col items-center justify-evenly rounded-2xl border-2 border-DARKBG bg-DARKBG text-center text-2xl sm:text-2xlsm md:static md:flex md:h-auto md:w-full md:flex-row md:border-none md:bg-LIGHTBG"
-        >
+        <ul id="nav-ul" className="absolute right-0 hidden h-[60vh] w-[75vw] list-none flex-col items-center justify-evenly rounded-2xl border-2 border-DARKBG bg-DARKBG text-center text-2xl sm:text-2xlsm md:static md:flex md:h-auto md:w-full md:flex-row md:border-none md:bg-LIGHTBG">
           <li>
-            <a
-              className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC"
-              href="./coat"
-            >
+            <a className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC" href="./coat">
               Coat
             </a>
           </li>
           <li>
-            <a
-              className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC"
-              href="./jacket"
-            >
+            <a className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC" href="./jacket">
               Jacket
             </a>
           </li>
 
           <li>
-            <a
-              className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC"
-              href="./pant"
-            >
+            <a className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC" href="./pant">
               Pant
             </a>
           </li>
           <li>
-            <a
-              className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC"
-              href="./vest"
-            >
+            <a className="header__nav-a md:text-DARKC md:visited:text-DARKC md:hover:text-DARKC md:focus:text-DARKC" href="./vest">
               Vest
             </a>
           </li>

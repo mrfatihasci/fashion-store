@@ -11,18 +11,10 @@ export default function About() {
           <a href="mailto:random@random.com">Mail us at random@randon.com</a>
         </li>
         <li className="flex flex-col items-center">
-          <iframe
-            width="425"
-            height="350"
-            title="our location on map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=27.16240078210831%2C38.40236106790815%2C27.165850102901462%2C38.40402369993633&amp;layer=mapnik"
-            className="border-[1px] border-black"
-          ></iframe>
+          <iframe width="425" height="350" title="our location on map" src="https://www.openstreetmap.org/export/embed.html?bbox=27.16240078210831%2C38.40236106790815%2C27.165850102901462%2C38.40402369993633&amp;layer=mapnik" className="border-[1px] border-black"></iframe>
           <br />
           <small>
-            <a href="https://www.openstreetmap.org/#map=19/38.40319/27.16413">
-              View Larger Map
-            </a>
+            <a href="https://www.openstreetmap.org/#map=19/38.40319/27.16413">View Larger Map</a>
           </small>
         </li>
         <li>
