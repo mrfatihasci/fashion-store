@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,17 +8,7 @@ export default function Home() {
       <h3></h3>
       <div className=" flex flex-grow flex-col flex-wrap items-center justify-center md:flex-row md:flex-nowrap">
         <figure className="w-full sm:w-11/12  md:ml-2 md:mr-2 md:w-1/2 md:pt-4 lg:ml-8 lg:mr-8 xl:ml-16 xl:mr-16">
-          <img
-            className="block h-auto w-full max-w-full  "
-            loading="lazy"
-            width="3264px"
-            height="3685px"
-            srcSet="public/images/index-913w.jpg 913w, public/images/index-1207w.jpg 1207w, public/images/index-1468w.jpg 1468w, public/images/index-1958w.jpg 1958w, public/images/index-2448w.jpg 2448w, public/images/index-3264w.jpg 3264w"
-            sizes="100vw"
-            src="public/images/index-3264w.jpg"
-            alt="sdfd"
-            title="non-existing product by non-existing company, this site is for educational purposes only"
-          />
+          <Image className={"block h-auto w-full max-w-full"} src={"/index-3264w.jpg"} alt="dfsdf" width={3264} height={3685} priority title="non-existing product by non-existing company, this site is for educational purposes only" /* sizes="(max-width: 768px) 60vw, (max-width: 1200px) 40vw, 20vw" */ />
           <figcaption className="text-center">https://pixabay.com/photos/fashion-male-beautiful-man-car-1399346/</figcaption>
         </figure>
         <p id="p--typewriting" className="block text-center text-2xl/loose md:w-1/2"></p>

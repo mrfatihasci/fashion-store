@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -105,7 +106,7 @@ export default function Footer() {
         </div>
       </div>
       <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img className="b-0 mb-0 ml-auto mr-auto mt-0" width="88px" height="auto" src="images/vcss-blue.gif" alt="Valid CSS!" />
+        <Image className="b-0 mb-0 ml-auto mr-auto mt-0 h-auto" src={"/vcss-blue.gif"} alt="Valif CSS!" width={88} height={31} priority title="worldwideweb cosorsium css" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </a>
       <p id="copyright" className="text-center">
         Copyright &copy;

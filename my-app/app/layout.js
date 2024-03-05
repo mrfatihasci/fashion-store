@@ -1,5 +1,5 @@
 import { Nunito } from "next/font/google";
-const nunito = Nunito({ subsets: ["latin"], weight: "400" });
+const nunito = Nunito({ subsets: ["latin"], weight: "400", variable: "--font-nunito" });
 /* import { Grape_Nuts } from "next/font/google"; */
 import "./globals.css";
 
@@ -20,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={nunito.className}>
+    <html lang="en" className={"scroll-smooth"}>
+      <body className="flex min-h-screen max-w-full flex-col bg-LIGHTBG text-xl text-DARKC">
         <Header />
         {children}
         <Footer />

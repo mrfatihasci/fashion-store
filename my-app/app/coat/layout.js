@@ -1,3 +1,3 @@
-export default function CoatLayout({ children }) {
-  return <section>{children}</section>
+export default function AboutLayout({ children }) {
+  return [children];
 }
