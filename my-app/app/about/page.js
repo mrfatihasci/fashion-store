@@ -1,6 +1,7 @@
+"use client";
 export default function About() {
   return (
-    <main className="flex flex-grow items-center justify-center text-center">
+    <main className="flex flex-grow items-center justify-center pb-4 text-center">
       <h2></h2>
       <h3></h3>
       <ul className="text-2xl">
