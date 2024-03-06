@@ -6,7 +6,7 @@ document.addEventListener("readystatechange", (event) => {
 });
 const initApp = () => {
   setInterval(changeBanner, 10000);
-  typeWriterInterval = setInterval(typeWriter2, 150);
+  typeWriterInterval = setInterval(typeWriter2, 250);
   document.getElementById("footer__year").innerHTML = new Date().getFullYear(); //prettier-ignore
   navMenuCollapsing();
   footerMenu.init();
@@ -36,13 +36,13 @@ function something() {
 
 //type writing code--------------------------------------------------------------
 const typewritingP = document.querySelector("#p--typewriting");
-const text = "setInterval for this typewriting effect is removed when completed, 5 event listeners for menuButton and footer list items are removed with only one left, the window resize event listener(in branches 'tailwindcss' and 'nextjs'). I'm not sure and did not compare the two cases if they were really necessary to remove. well we can discuss..";
+const text = "setInterval for this typewriting effect is removed when completed, 5 event listeners for menuButton and footer list items are removed with only one left, the window resize event listener(atm branch 'tailwindcss' only), which is basically used to add those removed event listeners when necessary. I'm not sure and did not compare the two cases if they were really necessary to remove. well we can discuss..";
 const textArray = text.split(" ");
 const textArrayLength = textArray.length;
 let x = 0;
 let typeWriterInterval;
 // Add typewriter effect function for the text of element to be added character by character(2letters at once)
-function typeWriter() {
+/* function typeWriter() {
   if (x < text.length) {
     typewritingP.innerHTML += text.charAt(x);
     x++;
@@ -50,14 +50,16 @@ function typeWriter() {
     clearInterval(typeWriterInterval);
     console.log("typewriter setInterval is inActive!");
   }
-}
+} */
 // Add typewritter effect function for the text of element to be added word by word
 function typeWriter2() {
   if (x < textArrayLength) {
+     typewritingP.innerHTML = "";
     typewritingP.innerHTML += ( " " + textArray[x] ); // prettier-ignore
     x++;
   } else {
     clearInterval(typeWriterInterval);
+    typewritingP.innerHTML=text;
     console.log("typewriter setInterval is inActive!");
   }
 }
