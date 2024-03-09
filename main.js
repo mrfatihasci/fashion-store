@@ -14,25 +14,41 @@ const initApp = () => {
 
 // BANNER ----------------------------------------------------------------
 let i = 0;
-const bannerArray = ["Custom Tailored", "Free Shipping on Europe Orders over $10000", "5% Discount on Orders over $10000"];
+const bannerArray = [
+  "Custom Tailored",
+  "Free Shipping on Europe Orders over $10000",
+  "5% Discount on Orders over $10000",
+];
+
 const changeBanner = () => {
-  if (i === bannerArray.length) {
+  let t = bannerArray.length;
+  if (i == t) {
     i = 0;
   }
-  document.getElementById("banner").innerHTML = bannerArray[i];
-  i += 1;
-  something();
-};
 
-function something() {
-  const newspaperSpinning = [{ transform: "translateY(25px)" }, { transform: "translateY(-25px) rotateX(130deg)" }];
-  const newspaperTiming = {
-    duration: 150,
+  const bannerTranslateUp = [{ transform: "translateY(-35px) " }];
+  const bannerTranslateDown = [
+    { transform: "translateY(35px) " },
+    { transform: "translateY(0px) " },
+  ];
+  const fastTiming = {
+    duration: 250,
     iterations: 1,
   };
+  const slowTiming = {
+    duration: 250,
+    iterations: 1,
+  };
+
   const newspaper = document.querySelector("#banner");
-  newspaper.animate(newspaperSpinning, newspaperTiming);
-}
+
+  // Using onfinish event to add another animation end of the animation
+  newspaper.animate(bannerTranslateUp, fastTiming).onfinish = () => {
+    document.getElementById("banner").innerHTML = bannerArray[i];
+    newspaper.animate(bannerTranslateDown, slowTiming);
+    i += 1;
+  };
+};
 
 //type writing code--------------------------------------------------------------
 const typewritingP = document.querySelector("#p--typewriting");
