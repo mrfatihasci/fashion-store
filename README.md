@@ -1,25 +1,75 @@
 # Repository Overview
 
-This repository contains 4 branches, each showcasing modifications to the same simple website to demonstrate and differentiate the advantages and drawbacks of multiple page server, multiple page Arduino server, Tailwind CSS, and SSR with Next.js.
+This repository contains 4 branches: main, arduino-server, tailwindcss, and nextjs. Each is showcasing some modifications to <b>the same simple website</b>.
+
+The aim is to demonstrate and differentiate the advantages and drawbacks of creating a simple website with:
+
+- HTML/CSS/JS on remote server(Multi-Page App),
+
+- HTML/CSS/JS on Arduino server(Multi-Page App)),
+
+- HTML/TailwindCSS/JS on remote server(Multi-Page App),
+
+- HTML/TailwindCSS/JS/React/Nextjs as SSG (Single Page App)
+
+<table style="margin: 1rem auto; background-color:  gray; color: black; width:50%;">
+    <caption style="caption-side:top; text-align:center; color: inherit; background-color: inherit;"><strong>Table of Contents</strong>
+    </caption>
+    <tr>
+        <th>Branch</th>
+        <th>Description</th>
+        <th>Average Score</th>
+    </tr>
+    <tr>
+        <td>main</td>
+        <td>The website as Multi-Page App with vanilla HTML/CSS/JS</td>
+        <td>89%</td>
+    </tr>
+     <tr>
+        <td>arduino-server</td>
+        <td>The website as Multi-Page App on Arduino Server</td>
+        <td>83.5%</td>
+    </tr> <tr>
+        <td>tailwindcss</td>
+        <td>The website as Multi-Page App with Tailwindcss</td>
+        <td>100%</td>
+    </tr> <tr>
+        <td>nextjs</td>
+        <td>The website as Single-Page App built with Nextjs</td>
+        <td>100%</td>
+    </tr>
+</table>
 
 ## Branch: main
 
-This branch features a vanilla HTML/CSS/JavaScript setup for a basic multiple-page website.
+This branch features a vanilla HTML/CSS/JS setup for a basic multiple-page website.
 
-https://mrfatihasci.github.io/fashion-store/
+https://fashion-store-main.vercel.app/
 
-<br>
+- NOTE: The lighthouse result came out to be lower not because vanilla page is a bad, but was rather due to the lack time for me to fix the css. After tailwindcss and nextjs branch, i should have come and made changes on branch "main" and "arduino-server" to sync all branches and have a real comparison. I just don't like spending time with vanilla css right after working with tailwindcss. Writing inline css with tailwind is super handy at this point.
 
-## Branch: arduino
+- Note2: On branch main & arduino-server, add h2 and h3 for accessibility, remove 3rd party css img with a local one, edit css
+
+<table style="margin: 1rem auto; background-color:  gray; color: black; width:50%;">
+        <caption style="caption-side:top; text-align:center; color: inherit; background-color: inherit;"><strong>Lighthouse Result for Mobile & Desktop on Average</strong></caption>
+        <tr>
+            <th>Performance</th><th>Accessibility</th><th>Best Practices</th><th>SEO</th> 
+        </tr>
+        <tr>
+            <td>80%</td>
+            <td>96%</td><td>80%</td><td>100%</td>
+        </tr>
+    </table>
+
+## Branch: arduino-server
 
 In this branch, you will find the Arduino server-side code that responds to client requests, along with the vanilla HTML/CSS/JS code for the same website as in the main branch.
 
-<details>
-  <summary> <strong>REVIEW</strong> </summary>
+<details style="border: 1px solid white;">
+  <summary> <strong>Pros and Cons</strong> </summary>
+While Arduino might be seen as a reliable platform, there are certain limitations to be aware of:
 
 #### Cons:
-
-While Arduino serves as a reliable platform, there are certain limitations to be aware of:
 
     -   Single-thread CPU: affects concurrent processing of multiple requests.
 
@@ -31,21 +81,35 @@ While Arduino serves as a reliable platform, there are certain limitations to be
 
     -   No Node.js Server: The absence of a Node.js server restricts serving only multiple pages.
 
+    -   Better to go with raspberry pi if  you need more resources or plan on using node.js
+
 #### Pros:
 
-    -   IO Pins with Analog and PWM Capabilities: ideal for smart home projects,
+    -   IO Pins with Analog and PWM Capabilities: ideal for smart home projects where you might want to connect sensors and a relay to supply power or a digital signal to a system, and even toogle the relay through page's UI.
 
-    -   Learning Web Development: it is great for learning web development, since it requires you to write your own back-end code from scratch(or template)
+    -   Learning Web Development: it is great for learning web development, since it requires you to write your own back-end code from scratch(or template). Writing response code to client's request is an excellent hands on experience.
 
 </details>
-<br>
 
-## Branch: tailwind
+<table style="margin: 1rem auto; background-color:  gray; color: black; width:50%;">
+        <caption style="caption-side:top; text-align:center; color: inherit; background-color: inherit;"><strong>Lighthouse Result for Mobile & Desktop on Average</strong></caption>
+        <tr>
+            <th>Performance</th><th>Accessibility</th><th>Best Practices</th><th>SEO</th> 
+        </tr>
+        <tr>
+            <td>69%</td>
+            <td>96%</td><td>78%</td><td>91%</td>
+        </tr>
+    </table>
+
+## Branch: tailwindcss
 
 The tailwind branch includes an installation guide for Tailwind CSS and its plugin, along with the HTML/JS code for the same website as in the main branch.
 
-  <details>
-  <summary> <strong> INSTALLATION</strong> </summary>
+https://fashion-store-dun.vercel.app/
+
+  <details style="border: 1px solid white;">
+  <summary> <strong> Tailwind Installation</strong> </summary>
 
 #### Installation of Tailwind (CLI)
 
@@ -118,8 +182,30 @@ npx prettier --check javascript.js
 
 </details>
 
-<br>
+<table style="margin: 1rem auto; background-color:  gray; color: black; width:50%;">
+        <caption style="caption-side:top; text-align:center; color: inherit; background-color: inherit;"><strong>Lighthouse Result for Mobile & Desktop on Average</strong></caption>
+        <tr>
+            <th>Performance</th><th>Accessibility</th><th>Best Practices</th><th>SEO</th> 
+        </tr>
+        <tr>
+            <td>100%</td>
+            <td>100%</td><td>100%</td><td>100%</td>
+        </tr>
+    </table>
 
 ## Branch: nextjs
 
 This branch comprises Next.js project codes for the website featured in the main branch.
+
+https://fashion-store-nextjs.vercel.app/
+
+<table style="margin: 1rem auto; background-color:  gray; color: black; width:50%;">
+        <caption style="caption-side:top; text-align:center; color: inherit; background-color: inherit;"><strong>Lighthouse Result for Mobile & Desktop on Average</strong></caption>
+        <tr>
+            <th>Performance</th><th>Accessibility</th><th>Best Practices</th><th>SEO</th> 
+        </tr>
+        <tr>
+            <td>100%</td>
+            <td>100%</td><td>100%</td><td>100%</td>
+        </tr>
+    </table>
