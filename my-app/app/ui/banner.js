@@ -52,7 +52,7 @@ export default function Banner() {
       const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-      document.getElementById("banner-time").innerHTML = `2024 Discount: ${days}d ${hours}d, ${minutes}m, ${seconds}s`;
+      document.getElementById("banner-time").innerHTML = `2024 Discount: ${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
       setTimeout(() => {
         setRemainingTime();
       }, 1000);
